@@ -1,0 +1,27 @@
+{
+  "name": "static-project-template",
+  "version": "0.0.1",
+  "description": "Simple project template with LESS, Autoprefixer and livereload.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "dev": "gulp",
+    "prod": "gulp prod"
+  },
+  "author": "Andrey Miskov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.11",
+    "eslint": "^3.19.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "stylelint": "^7.13.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "install": "^0.10.1",
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
+  }
+}

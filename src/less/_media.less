@@ -1,0 +1,32 @@
+// See this thread for better explanation:
+// http://stackoverflow.com/questions/15837808/fancy-media-queries-with-some-less-magic
+
+/* # Setup devices width */
+// ## Minimum values for device width
+@xs-min: 320px; // extra small
+@sm-min: 768px; // small
+@md-min: 992px; // middle
+@lg-min: 1200px; // large
+
+// ## Maximum values for device width
+@xs-max: (@sm-min - 1); // extra small
+@sm-max: (@md-min - 1); // small
+@md-max: (@lg-min - 1); // middle
+
+/* # Variables for mobile first approach and strict ranges */
+@phone: ~'only screen and (min-width: @{xs-min})';
+@phone-strict: ~'only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})';
+
+@tablet: ~'only screen and (min-width: @{sm-min})';
+@tablet-strict: ~'only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})';
+
+@desktop: ~'only screen and (min-width: @{md-min})';
+@desktop-strict: ~'only screen and (min-width: @{md-min}) and (max-width: @{md-max})';
+
+@large: ~'only screen and (min-width: @{lg-min})';
+
+
+// Это служебный файл, никакие стили тут писать не нужно.
+// Задача этого файла — объявить переменные для медиа-запросов.
+// Этот файл импортируется в `main.less`, переменные `@phone`, `@tablet` и пр.
+// становятся там доступны, дальше работаем только в нем.
