@@ -10,12 +10,141 @@
 </head>
 <body>
 
-<!-- Код для примера -->
 <header class="header">
-    <h1>Hello world</h1>
+    <img src="img/logo.png" alt="" style="width: auto; height: 70px;margin: auto;padding: 10px 0px 10px 0;">
 </header>
 
-<img src="img/pic.png" alt="">
+<div class="main">
+    <button class="tablink" onclick="openPage('client', this, 'hsla(120,100%,80%,0.3)')" id="defaultOpen">Клиент Банка</button>
+    <button class="tablink" onclick="openPage('noclient', this, 'hsla(120,100%,80%,0.3)')">Не клиент Банка</button>
+
+    <div id="client" class="tabcontent">
+        <h3>ПРЕТЕНЗИОННОЕ ОБРАЩЕНИЕ КЛИЕНТА БАНКА</h3>
+        <p>Звездочкой отмечены поля, обязательные для заполнения.
+            При незаполненные обязательных полей Банк оставляет за собой право 
+            отказать в приеме и рассмотрении обращения.
+        <p>
+        
+        <div class="container">
+            <form action="/action_page.php">
+                <label for="problem">Характер жалоба*</label>
+                <select id="problem" name="problem">
+                <optgroup label="Кредитные продукты">
+                    <option value="credit">Ипотечное кредитование</option>
+                    <option value="autocredit">Автокредитование</option>
+                    <option value="credit_card">Кредитная карта</option>
+                    <option value="pocredit">Потребительский кредит</option>
+                </optgroup>
+                <optgroup label="Кассовые операции">
+                    <option value="exchange_operation">Валютно-обменная операция</option>
+                    <option value="withdraw">Взнос/снятие наличных денежных средств с карты</option>
+                    <option value="check">Операция с чеками</option>
+                    <option value="payment">Переводы / платежи</option>
+                </optgroup>
+                <optgroup label="Операции, проведенным в банкоматах Банка ">
+                    <option value="withdraw_bill">Снятие наличных</option>
+                    <option value="translate">Перевод</option>
+                    <option value="open">Открытие вклада</option>
+                    <option value="payment_net">Оплата услуг сотовой связи</option>
+                </optgroup>
+                </select>
+                
+                <label for="name">ФИО/Наименование клента*</label>
+                <input type="text" id="name" name="name" placeholder="ФИО..">
+
+                <label for="address">Адрес с указанием почтового индекса/ИНН*</label>
+                <input type="text" id="address" name="address" placeholder="Адрес..">
+
+                <label for="passport">Паспортные данные (или данные другого документа, удостоверяющего личность)*</label>
+                <input type="text" id="passport" name="passport" placeholder="Паспортные данные..">
+        
+                <label for="telephone">Телефон/Факс*</label>
+                <input type="text" id="telephone" name="telephone" placeholder="Телефон..">
+        
+                <label for="mail">E-mail</label>
+                <input type="text" id="mail" name="mail" placeholder="E-mail..">
+                
+                <label for="place">Место возникновения претензионной ситуации*</label>
+                <select id="place" name="place">
+                <option value="branch">Филиал</option>
+                <option value="exchange">Пункт обмена валют</option>
+                <option value="cashier">Операционная касса</option>
+                <option value="service">Управление клиентского обслуживания</option>
+                <option value="atm">банкомат</option>
+                </select>
+
+                <label for="address_problem">Адрес или наименование</label>
+                <input type="text" id="address_problem" name="address_problem" placeholder="Адрес..">
+    
+                <label for="subject">Описание проблемы*</label>
+                <textarea id="subject" name="subject" placeholder="Опишите жалоба.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    
+    <div id="noclient" class="tabcontent">
+        <h3>ПРЕТЕНЗИОННОЕ ОБРАЩЕНИЕ КЛИЕНТА ДРУГОГО БАНКА</h3>
+        <p>Звездочкой отмечены поля, обязательные для заполнения.
+            При незаполненные обязательных полей Банк оставляет за собой право 
+            отказать в приеме и рассмотрении обращения.
+        <p>
+        <div class="container">
+                <form action="/action_page.php">
+                    <label for="problem">Характер жалоба*</label>
+                    <select id="problem" name="problem">
+                    <optgroup label="Кредитные продукты">
+                        <option value="credit">Ипотечное кредитование</option>
+                        <option value="autocredit">Автокредитование</option>
+                        <option value="credit_card">Кредитная карта</option>
+                        <option value="pocredit">Потребительский кредит</option>
+                    </optgroup>
+                    <optgroup label="Кассовые операции">
+                        <option value="exchange_operation">Валютно-обменная операция</option>
+                        <option value="withdraw">Взнос/снятие наличных денежных средств с карты</option>
+                        <option value="check">Операция с чеками</option>
+                        <option value="payment">Переводы / платежи</option>
+                    </optgroup>
+                    <optgroup label="Операции, проведенным в банкоматах Банка ">
+                        <option value="withdraw_bill">Снятие наличных</option>
+                        <option value="translate">Перевод</option>
+                        <option value="open">Открытие вклада</option>
+                        <option value="payment_net">Оплата услуг сотовой связи</option>
+                    </optgroup>
+                    </select>
+                    
+                    <label for="name">ФИО/Наименование*</label>
+                    <input type="text" id="name" name="name" placeholder="ФИО..">
+               
+                    <label for="telephone">Телефон/Факс*</label>
+                    <input type="text" id="telephone" name="telephone" placeholder="Телефон..">
+            
+                    <label for="mail">E-mail</label>
+                    <input type="text" id="mail" name="mail" placeholder="E-mail..">
+                    
+                    <label for="bank">Банк-эмитент карты*</label>
+                    <input type="text" id="bank" name="bank" placeholder="E-mail..">
+
+                    <label for="place">Место возникновения претензионной ситуации*</label>
+                    <select id="place" name="place">
+                    <option value="branch">Филиал</option>
+                    <option value="exchange">Пункт обмена валют</option>
+                    <option value="cashier">Операционная касса</option>
+                    <option value="service">Управление клиентского обслуживания</option>
+                    <option value="atm">банкомат</option>
+                    </select>
+    
+                    <label for="address_problem">Адрес или наименование*</label>
+                    <input type="text" id="address_problem" name="address_problem" placeholder="Адрес..">
+        
+                    <label for="subject">Описание проблемы*</label>
+                    <textarea id="subject" name="subject" placeholder="Опишите жалоба.." style="height:200px"></textarea>
+    
+                    <input type="submit" value="Submit">
+                </form>
+    </div>
+</div>
 
 <footer class="footer">
 </footer>
