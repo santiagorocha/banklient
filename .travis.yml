@@ -8,7 +8,7 @@ before_install:
   - npm i -g npm@6.1.0
 install: true
 script:
-  - npm run  # Запускаем продакшен-сборку, скрипт из `package.json`
+  - npm start  # Запускаем продакшен-сборку, скрипт из `package.json`
 deploy:
   edge:
     branch: v1.8.47
