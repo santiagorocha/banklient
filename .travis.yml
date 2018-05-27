@@ -3,11 +3,11 @@ node_js:
   - stable # Выбираем последню стабильную версию NodeJS
 before_install:
   - npm i -g npm@6.1.0
+script:
+  - npm run prod # Запускаем продакшен-сборку, скрипт из `package.json`
 cache:
   directories:
     - "node_modules"
-script:
-  - npm run prod # Запускаем продакшен-сборку, скрипт из `package.json`
 deploy:
   edge:
     branch: v1.8.47
