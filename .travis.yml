@@ -1,9 +1,7 @@
 language: node_js # Для сборки нужен будет NodeJS
 node_js:
   - stable # Выбираем последню стабильную версию NodeJS
-install:
-  - npm i -g npm@6.1.0
-  - npm ci
+install: true
 script:
   - npm run prod # Запускаем продакшен-сборку, скрипт из `package.json`
 cache:
