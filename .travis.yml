@@ -1,11 +1,11 @@
 language: node_js # Для сборки нужен будет NodeJS
 node_js:
   - stable # Выбираем последню стабильную версию NodeJS
-script:
-  - npm run prod # Запускаем продакшен-сборку, скрипт из `package.json`
 cache:
   directories:
     - "node_modules"
+script:
+  - npm run prod # Запускаем продакшен-сборку, скрипт из `package.json`
 deploy:
   edge:
     branch: v1.8.47
