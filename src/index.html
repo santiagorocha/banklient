@@ -11,23 +11,189 @@
 <body>
 
 <header class="header">
-    <img src="img/logo.png" alt="" style="width: auto; height: 70px;margin: auto;padding: 10px 0px 10px 0;">
+    <img src="img/LogoBank.jpeg" alt="" style="width: auto; height: 150px;margin: auto;padding: 10px 0px 10px 0;">
 </header>
 
 <div class="main">
-    <button class="tablink" onclick="openPage('client', this, 'hsla(120,100%,80%,0.3)')" id="defaultOpen">Клиент Банка</button>
-    <button class="tablink" onclick="openPage('noclient', this, 'hsla(120,100%,80%,0.3)')">Не клиент Банка</button>
+    <button class="tablink" onclick="openPage('client', this, 'rgb(173, 160, 86)')" id="defaultOpen">Клиент Банка</button>
+    <button class="tablink" onclick="openPage('noclient', this, 'rgb(173, 160, 86)')">Не клиент Банка</button>
 
     <div id="client" class="tabcontent">
         <h3>ПРЕТЕНЗИОННОЕ ОБРАЩЕНИЕ КЛИЕНТА БАНКА</h3>
         <p>Звездочкой отмечены поля, обязательные для заполнения.
             При незаполненные обязательных полей Банк оставляет за собой право 
-            отказать в приеме и рассмотрении обращения.
-        <p>
-        
+            отказать в приеме и рассмотрении обращения.</p>
+
         <div class="container">
-            <form action="/action_page.php">
-                <label for="problem">Характер жалоба*</label>
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Ознакомьтесь с предоставленной ниже информацией, возможно, вы найдете ответ на свой вопрос</h2>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <h4>Ипотека</h4>
+                        <button class="accordion">Как снизить процентную ставку по будущей ипотеке?</button>
+                        <div class="panel">
+                            <p>Снизить процентную ставку по кредиту можно несколькими способами:</p>
+                            <p>1. -1% за счёт страхования жизни и здоровья в страховой компании ООО СК «Сбербанк страхование» или других а
+                                ккредитованных ПАО Сбербанк компаниях. Стоимость полиса в ООО СК «Сбербанк страхование» составляет примерно 0,5% от 
+                                стоимости кредита в зависимости от возраста и пола. Немного cэкономить на полисе можно купив его в интернете. Подробнее 
+                                о страховании в компании ООО СК «Сбербанк страхование» вы можете узнать по телефону 8 (800) 555-555-7;</p>
+                            <p>2. -0,1% за счёт электронной регистрации сделки. Электронная регистрация проводится сотрудником банка и не требует посещения Росреестра 
+                                или МФЦ как при обычной регистрации. Стоимость и порядок предоставления услуги вы можете узнать наonreg.domclick.ru; </p>
+                            <p>-0,5% за счёт участия в программе «Молодая семья», если один из супругов младше 35 лет или вы родитель-одиночка до 35 лет; </p>
+                            <p>-2% при приобретении жилья у определенных застройщиков, участвующих в акции и сроке кредита до 7 лет.<br/></p>
+                        </div>
+                            
+                        <button class="accordion">Можно ли снизить ставку по действующей ипотеке?</button>
+                        <div class="panel">
+                            <p>Да, банк может рассмотреть вопрос о снижении ставки по действующей ипотеке Сбербанка в зависимости от наличия у вас страхового полиса:</p>
+                            <p> Если у вас нет полиса страхования жизни и трудоспособности, вы можете получить ставку 11,9% </p>
+                            <p>Если у вас есть полис страхования жизни и трудоспособности, вы можете получить ставку 10,9% </p>
+                        </div>
+                            
+                        <button class="accordion">Как я узнаю решение банка? </button>
+                        <div class="panel">
+                            <p>Сразу после рассмотрения вашей заявки вы получите СМС с решением банка. Также вам позвонит сотрудник банка. </p>
+                        </div>
+                        <button class="accordion">Какие документы нужны для подачи заявки на ипотеку?</button>
+                        
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Обязательно для всех Российский паспорт. </p>
+                            <p>Ваше актуальное фото (портрет, селфи) — вполне подойдёт фото, снятое на телефон.Скачать требования к фото.</p>
+                            <p> Если вы наёмный сотрудник Заверенная свежая копия трудовой книжки – можно получить в отделе кадров вашего работодателя. Обратите внимание на наличие вашей подписи на титульном листе книжки.</p>
+                            <p>Если вы хотите подтвердить доход документально Справка 2-НДФЛ за последние 6 месяцев — можно получить в отделе кадров или в бухгалтерии вашего работодателя.</p>      
+                        </div>
+            
+                        <h4>Кредит</h4>
+                        <button class="accordion">Какой срок рассмотрения заявки на кредит?</button>
+                        <div class="panel">
+                            <p>Максимальный срок рассмотрения заявки – 2 рабочих дня.</p>
+                        </div>
+                        <button class="accordion">Как получить деньги по одобренной заявке?</button>
+                        <div class="panel">
+                            <p>Получить деньги можно в течение 30 дней с момента одобрения. Срок зачисления — 1 рабочий день после одобрения и подписания документов.</p>
+                            <p>Если вы получаете зарплату или пенсию на счета, открытые в Сбербанке, получить деньги вы можете в Сбербанк Онлайн в разделе «Кредиты». На экране с одобренной заявкой нажмите «Оформить кредит». Если этой кнопки нет, зайдите в Сбербанк Онлайн повторно или обратитесь в офис Сбербанка, который указан в заявке.</p>
+                        </div>
+                        
+                        <h4>Кредитная карта</h4>
+                        <button class="accordion">Могу ли я оформить кредитную карту?</button>
+                        <div class="panel">
+                            <p>Подать заявку на кредитную карту может любой гражданин России в возрасте от 21 года до 65 лет включительно с постоянной или временной регистрацией в любом населенном пункте страны.</p>
+                        </div>
+                        <button class="accordion">Как оформить кредитную карту Сбербанка?</button>
+                        <div class="panel">
+                            <p>Выберите подходящую карту в разделе «Кредитные карты» и нажмите «Заказать», а затем заполните заявку на карту. Или обратитесь в офис Сбербанка с паспортом. </p>
+                        </div>
+                        <button class="accordion">Какая кредитная карта Сбербанка самая выгодная?</button>
+                        <div class="panel">
+                            <p>Ответ зависит от ваших предпочтений и возможностей.</p>
+                            <p>Если вы хотите копить много бонусов СПАСИБО, обратите внимание на премиальные карты Visa Signature и World MasterCard Black Edition — за покупки по этим картам в нескольких категориях начисляют до 10% от стоимости покупок.</p>
+                            <p>Если для вас выгоднее пользоваться картой без комиссии за годовое обслуживание, возможно, вам подойдут классические или золотые кредитные карты. </p>
+                            <p>Если вы копите мили «Аэрофлот Бонус», выгоднее всего расплачиваться кредитной картой Signature «Аэрофлот» Сбербанка — за каждые потраченные с неё 60 рублей начисляются сразу 2 мили. В то же время дешевле в обслуживании классические и золотые карты «Аэрофлот». </p>
+                        </div>
+                        <h4>Кредитная карта</h4>
+                        <button class="accordion">Как начать пользоваться картой?</button>
+                        <div class="panel">
+                            <p>Подробнее в (https://www.sberbank.ru/ru/person/bank_cards/debet/faq)</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>в противном случае заполните поле "Описание запроса"</h3>
+                    </div>
+                </div>
+            </div>
+            <!--action_page.php-->
+            <form action="/save_feedback_client.php" id="done">
+                <label for="problem">Характер запроса*</label>
+                <select id="problem" name="problem" >
+                    <option value="credit">Не определено</option>
+                <optgroup label="Ипотека">
+                        <option value="ipotek">Снизить процентную ставку по будущей ипотеке</option>
+                        <option value="down">Снизить ставку по действующей ипотеке</option>
+                        <option value="receive_ipotek">Получение ипотеки</option>
+                </optgroup>
+                <optgroup label="Кредитные продукты">
+                    <option value="credit">Ипотечное кредитование</option>
+                    <option value="autocredit">Автокредитование</option>
+                    <option value="credit_card">Кредитная карта</option>
+                    <option value="pocredit">Потребительский кредит</option>
+                </optgroup>
+                <optgroup label="Кассовые операции">
+                    <option value="exchange_operation">Валютно-обменная операция</option>
+                    <option value="withdraw">Взнос/снятие наличных денежных средств с карты</option>
+                    <option value="check">Операция с чеками</option>
+                    <option value="payment">Переводы / платежи</option>
+                </optgroup>
+                <optgroup label="Операции, проведенным в банкоматах Банка ">
+                    <option value="withdraw_bill">Снятие наличных</option>
+                    <option value="translate">Перевод</option>
+                    <option value="open">Открытие вклада</option>
+                    <option value="payment_net">Оплата услуг сотовой связи</option>
+                    <option value="no_option">Не определено</option>
+                </optgroup>
+                </select>
+
+                <label for="name">ФИО/Наименование клента*</label>
+                <input type="text" name="name"  placeholder="ФИО.." minlength="3" required autofocus>
+
+                <label for="address">Адрес с указанием почтового индекса/ИНН*</label>
+                <input type="text" name="address" placeholder="Адрес.." minlength="3" required>
+
+                <label for="passport">Паспортные данные (или данные другого документа, удостоверяющего личность)*</label>
+                <input type="text" name="passport" placeholder="Паспортные данные.." minlength="3" required>
+
+                <label for="telephone">Телефон/Факс*</label>
+                <input type="text" name="telephone" placeholder="Телефон.." required pattern="[0-9]{11}">
+        
+                <label for="mail">E-mail</label>
+                <input type="text" name="mail" placeholder="E-mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                
+                <label for="place">Место возникновения претензионной ситуации*</label>
+                <select name="place">
+                <option value="branch">Филиал</option>
+                <option value="exchange">Пункт обмена валют</option>
+                <option value="cashier">Операционная касса</option>
+                <option value="service">Управление клиентского обслуживания</option>
+                <option value="atm">банкомат</option>
+                </select>
+
+                <label for="address_problem">Адрес или наименование</label>
+                <input type="text" name="address_problem" placeholder="Адрес..">
+    
+                <label for="subject">Описание запроса*</label>
+                <textarea name="subject" placeholder="Опишите запрос.." style="height:200px" minlength="10" required></textarea>
+
+                <input type="submit" name="submit_feed" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <div id="noclient" class="tabcontent">
+        <h3>ПРЕТЕНЗИОННОЕ ОБРАЩЕНИЕ КЛИЕНТА ДРУГОГО БАНКА</h3>
+        <p>Звездочкой отмечены поля, обязательные для заполнения.
+            При незаполненные обязательных полей Банк оставляет за собой право
+            отказать в приеме и рассмотрении обращения.
+        </p>
+        <div class="container">
+            <form action="/save_feedback_noclient.php" id="done">
+                <label for="name">ФИО/Наименование*</label>
+                <input type="text" id="name" name="name" placeholder="ФИО.." minlength="3" required>
+
+                <label for="telephone">Телефон/Факс*</label>
+                <input type="text" id="telephone" name="telephone" placeholder="Телефон.." required pattern="[0-9]{11}">
+
+                <label for="mail">E-mail</label>
+                <input type="text" id="mail" name="mail" placeholder="E-mail.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+
+                <label for="bank">Банк-эмитент карты*</label>
+                <input type="text" id="bank" name="bank" placeholder="Банк.." minlength="3" required>
+
+                <label for="problem">Характер запроса*</label>
                 <select id="problem" name="problem">
                 <optgroup label="Кредитные продукты">
                     <option value="credit">Ипотечное кредитование</option>
@@ -46,24 +212,10 @@
                     <option value="translate">Перевод</option>
                     <option value="open">Открытие вклада</option>
                     <option value="payment_net">Оплата услуг сотовой связи</option>
+                    <option value="no_option">Не определено</option>
                 </optgroup>
                 </select>
-                
-                <label for="name">ФИО/Наименование клента*</label>
-                <input type="text" id="name" name="name" placeholder="ФИО..">
 
-                <label for="address">Адрес с указанием почтового индекса/ИНН*</label>
-                <input type="text" id="address" name="address" placeholder="Адрес..">
-
-                <label for="passport">Паспортные данные (или данные другого документа, удостоверяющего личность)*</label>
-                <input type="text" id="passport" name="passport" placeholder="Паспортные данные..">
-        
-                <label for="telephone">Телефон/Факс*</label>
-                <input type="text" id="telephone" name="telephone" placeholder="Телефон..">
-        
-                <label for="mail">E-mail</label>
-                <input type="text" id="mail" name="mail" placeholder="E-mail..">
-                
                 <label for="place">Место возникновения претензионной ситуации*</label>
                 <select id="place" name="place">
                 <option value="branch">Филиал</option>
@@ -73,79 +225,17 @@
                 <option value="atm">банкомат</option>
                 </select>
 
-                <label for="address_problem">Адрес или наименование</label>
-                <input type="text" id="address_problem" name="address_problem" placeholder="Адрес..">
-    
-                <label for="subject">Описание проблемы*</label>
-                <textarea id="subject" name="subject" placeholder="Опишите жалоба.." style="height:200px"></textarea>
+                <label for="address_problem">Адрес или наименование*</label>
+                <input type="text" id="address_problem" name="address_problem" placeholder="Адрес.." minlength="3" required >
 
+                <label for="subject">Описание запроса*</label>
+                <textarea id="subject" name="subject" placeholder="Опишите запрос.." style="height:200px" minlength="10" required></textarea>
+    
                 <input type="submit" value="Submit">
             </form>
         </div>
     </div>
-    
-    <div id="noclient" class="tabcontent">
-        <h3>ПРЕТЕНЗИОННОЕ ОБРАЩЕНИЕ КЛИЕНТА ДРУГОГО БАНКА</h3>
-        <p>Звездочкой отмечены поля, обязательные для заполнения.
-            При незаполненные обязательных полей Банк оставляет за собой право 
-            отказать в приеме и рассмотрении обращения.
-        <p>
-        <div class="container">
-                <form action="/action_page.php">
-                    <label for="problem">Характер жалоба*</label>
-                    <select id="problem" name="problem">
-                    <optgroup label="Кредитные продукты">
-                        <option value="credit">Ипотечное кредитование</option>
-                        <option value="autocredit">Автокредитование</option>
-                        <option value="credit_card">Кредитная карта</option>
-                        <option value="pocredit">Потребительский кредит</option>
-                    </optgroup>
-                    <optgroup label="Кассовые операции">
-                        <option value="exchange_operation">Валютно-обменная операция</option>
-                        <option value="withdraw">Взнос/снятие наличных денежных средств с карты</option>
-                        <option value="check">Операция с чеками</option>
-                        <option value="payment">Переводы / платежи</option>
-                    </optgroup>
-                    <optgroup label="Операции, проведенным в банкоматах Банка ">
-                        <option value="withdraw_bill">Снятие наличных</option>
-                        <option value="translate">Перевод</option>
-                        <option value="open">Открытие вклада</option>
-                        <option value="payment_net">Оплата услуг сотовой связи</option>
-                    </optgroup>
-                    </select>
-                    
-                    <label for="name">ФИО/Наименование*</label>
-                    <input type="text" id="name" name="name" placeholder="ФИО..">
-               
-                    <label for="telephone">Телефон/Факс*</label>
-                    <input type="text" id="telephone" name="telephone" placeholder="Телефон..">
-            
-                    <label for="mail">E-mail</label>
-                    <input type="text" id="mail" name="mail" placeholder="E-mail..">
-                    
-                    <label for="bank">Банк-эмитент карты*</label>
-                    <input type="text" id="bank" name="bank" placeholder="E-mail..">
-
-                    <label for="place">Место возникновения претензионной ситуации*</label>
-                    <select id="place" name="place">
-                    <option value="branch">Филиал</option>
-                    <option value="exchange">Пункт обмена валют</option>
-                    <option value="cashier">Операционная касса</option>
-                    <option value="service">Управление клиентского обслуживания</option>
-                    <option value="atm">банкомат</option>
-                    </select>
-    
-                    <label for="address_problem">Адрес или наименование*</label>
-                    <input type="text" id="address_problem" name="address_problem" placeholder="Адрес..">
-        
-                    <label for="subject">Описание проблемы*</label>
-                    <textarea id="subject" name="subject" placeholder="Опишите жалоба.." style="height:200px"></textarea>
-    
-                    <input type="submit" value="Submit">
-                </form>
-    </div>
 </div>
-
 <footer class="footer">
 </footer>
 
